@@ -3,8 +3,13 @@ var plumber = require('gulp-plumber');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const wait = require('gulp-wait');
-const babel = require('gulp-babel');;
+const babel = require('gulp-babel');
 const rename = require('gulp-rename');
+var awspublish  = require('gulp-awspublish');
+
+aws = JSON.parse(fs.readFileSync('./aws.json'));
+var publisher = awspublish.create(aws);
+
 
 gulp.task('scripts', function() {
     return gulp.src('./js/scripts.js')
@@ -36,4 +41,10 @@ gulp.task('styles', function () {
 gulp.task('watch', function() {
     gulp.watch('./js/scripts.js', gulp.series('scripts'));
     gulp.watch('./scss/styles.scss', gulp.series('styles'));
+});
+
+
+//defining single task with name "deploy"
+gulp.task('deploy',function(){
+
 });
