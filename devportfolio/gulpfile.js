@@ -5,10 +5,10 @@ const sass = require('gulp-sass');
 const wait = require('gulp-wait');
 const babel = require('gulp-babel');
 const rename = require('gulp-rename');
-var awspublish  = require('gulp-awspublish');
+//var awspublish  = require('gulp-awspublish');
 
-aws = JSON.parse(fs.readFileSync('./aws.json'));
-var publisher = awspublish.create(aws);
+//aws = JSON.parse(fs.readFileSync('./aws.json'));
+//var publisher = awspublish.create(aws);
 
 
 gulp.task('scripts', function() {
@@ -43,8 +43,6 @@ gulp.task('watch', function() {
     gulp.watch('./scss/styles.scss', gulp.series('styles'));
 });
 
-
-//defining single task with name "deploy"
-gulp.task('deploy',function(){
-
+gulp.task('update-style',function() {
+    gulp.watch('./scss/styles.scss', gulp.series('styles'));
 });
