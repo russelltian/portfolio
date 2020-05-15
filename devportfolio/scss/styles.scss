@@ -32,7 +32,8 @@
     ----- 1. Variables -----
     ------------------------
 */
-
+// New added color
+$background-color: #ffb67a;
 // Define base and accent colors
 $base-color: #fc8c03;
 $base-color-hover: darken($base-color, 10%);
@@ -675,6 +676,12 @@ footer {
         margin: 0 0 15px 0;
         font-size: 0.9em;
     }
+    a{
+        color: $heading;
+        margin: 0 0 15px 0;
+        font-size: 1.35em;
+        text-decoration: underline;
+    }
 }
 
 .no-image {
@@ -732,12 +739,12 @@ footer {
 
 #contact {
     padding: 50px 15px;
-    background: $base-color;
+    background: $background-color;
     text-align: center;
 
     h2 {
         margin: 0 0 15px 0;
-        color: #fff;
+        color: #1d1d1d;
         font-weight: 500;
     }
 }
@@ -753,11 +760,11 @@ footer {
         border-radius: 4px;
         border: none;
         margin-bottom: 10px;
-        background: darken($base-color, 15%);
+        background: #darken($base-color, 15%);
         color: #fff;
         @include transition();
         @include placeholder {
-            color: #fff;
+            color: #000;
         }
 
         &:focus {
@@ -778,7 +785,7 @@ footer {
         border-radius: 4px;
         padding: 5px 10px;
         border: none;
-        color: $base-color;
+        color: #000000;
         font-weight: 700;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         @include transition();
