@@ -19,7 +19,7 @@
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
-    "aws-sdk": "^2.673.0",
+    "aws-sdk": "^2.814.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-awspublish": "^4.1.1",
